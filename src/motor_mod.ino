@@ -14,6 +14,7 @@ void setup_motor_mod(){
  pinModeMotor(rightMotor,OUTPUT);
  pinModeMotor(leftMotor,OUTPUT);
 }
+
 void pinModeMotor(int motor[],int mode ){
   for (int i = 0;i<=2; i++){
     pinMode(motor[i], mode);

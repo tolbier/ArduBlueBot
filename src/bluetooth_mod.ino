@@ -2,8 +2,8 @@
 
 #define baudRate_bluetooth_mod 9600
 
-#define rxPin_bluetooth_mod 8
-#define txPin_bluetooth_mod 9
+#define rxPin_bluetooth_mod A0
+#define txPin_bluetooth_mod A1
 
 #define btDataPacketMaxLength 5
 
@@ -44,6 +44,7 @@ void process_bt_data(char btDataPacket[])
         setSpeedMotorFromCoords(joyX,joyY);
   }else if (btDataPacket[0]==BUTTON_PACKET){
     robotMode= (btDataPacket[1]==1)?AUTO_ROBOT_MODE:BT_ROBOT_MODE;
+    Serial.println(robotMode);
   }
 }
 boolean  getChar(char &car){
