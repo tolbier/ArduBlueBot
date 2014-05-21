@@ -39,6 +39,14 @@ void stopMotors(){
   rightV=0;
   leftV =0;
 }
+void motorsGoAhead(){
+  rightV=255;
+  leftV =255;
+}
+void setMotorsValues(int _leftV,int _rightV){
+  rightV=_rightV;
+  leftV=_leftV;
+}
 void setSpeedMotorFromCoords(int joyX, int joyY){
         rightV = speedMotor(-joyX,joyY);
         leftV = speedMotor(joyX,joyY); 

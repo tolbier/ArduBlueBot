@@ -1,10 +1,12 @@
 
 
 void setup()  { 
+  Serial.begin(115200);
+  delay(1000);
   setup_bluetooth_mod();
   setup_auto_mod();
   setup_motor_mod();
-  Serial.begin(57600);
+  setup_distance_mod();
 
 } 
 
