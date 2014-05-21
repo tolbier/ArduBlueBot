@@ -44,7 +44,6 @@ void process_bt_data(char btDataPacket[])
         setSpeedMotorFromCoords(joyX,joyY);
   }else if (btDataPacket[0]==BUTTON_PACKET){
     robotMode= (btDataPacket[1]==1)?AUTO_ROBOT_MODE:BT_ROBOT_MODE;
-    Serial.println(robotMode);
   }
 }
 boolean  getChar(char &car){

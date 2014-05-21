@@ -35,7 +35,7 @@ int speedMotor(int aX, int aY){
   retorno= constrain(retorno,-255,255);  
   return retorno;
 }
-void stopMotors(){
+void motorsStop(){
   rightV=0;
   leftV =0;
 }
